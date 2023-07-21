@@ -54,6 +54,8 @@ Once the app registration is complete, now you need to compile the connector to 
 
 1. Clone this repo to your local machine.
 
+1. Create a client_id.user file in the project folder.
+
 1. <strong>Copy the Application ID into the client_id.user file located in the project.</strong>
 
 1. Using your keyboard, use the shortcut Ctrl+Shift+B.  Visual Studio will prompt you within the command palette to choose a build task. Select the "build: Build connector project using MakePQX".

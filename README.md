@@ -30,15 +30,18 @@ The following describes the steps needed to setup the app service principal and 
 1. Follow the instructions to [register an app in the Azure Portal](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).  
 
 2. During that process the redirect URL should be: "https://oauth.powerbi.com/views/oauthredirect.html"
+3. Please set the Mobile and desktop application permissions as shown in Figure 1.
 
-3. Please also add the following Graph API Delegated Permissions
+ ![Auth Permissions](./documentation/images/auth-settings.png)
+
+4. Please also add the following Graph API Delegated Permissions
 
     * Group.Read.All - This allows the user to pull their groups and find Planner plans associated with their groups.
     * Tasks.Read - For reading Planner plans, buckets, and tasks.
     * Tasks.Read.Shared - For reading Planner tasks.
     * User.ReadBasic.All - This allows users to pull the basic profile information for tasks assigned to a person.
 
-If done correctly, the API Permissions should look like Figure 1.
+If done correctly, the API Permissions should look like Figure 2.
 
 ![API Permissions](./documentation/images/api-permissions.png)
 

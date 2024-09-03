@@ -45,7 +45,7 @@ If done correctly, the API Permissions should look like Figure 2.
 
 ![API Permissions](./documentation/images/api-permissions.png)
 
-4. Copy the Application ID.
+5. Copy the Application ID.
 
 ### Build the Connector
 

@@ -6,11 +6,11 @@ shared MyExtension.UnitTest =
     Source = MSPLANNERRESTAPI.FunctionCatalog(),
 
     /*** TEST VARIABLES ***/
-    GroupId = "",
-    PlanId = "",
-    TaskId = "",
-    BucketId = "",
-    UserId = "",
+    GroupId = "{GROUP ID}",
+    PlanId = "{PLAN ID}",
+    TaskId = "{TASK ID}",
+    BucketId = "{BUCKET ID}",
+    UserId = "{USER ID}",
     // Extracts Function from group
     _GetFunction = (_func_key as text) =>
         let
@@ -68,9 +68,9 @@ shared MyExtension.UnitTest =
             true,
             Value.Is(ListUsersDirectMemberships,Function.Type)
         ),
-        Fact("ListUsersDirectMemberships Should Return Correct Metadata",
-            "directoryObjects",
-            Text.AfterDelimiter(Json.Document(ListUsersDirectMemberships())[#"@odata.context"],"#")
+        Fact("ListUsersDirectMemberships Should Return a List",
+            true,
+            List.Count(ListUsersDirectMemberships()) > 0
         ),        
         /* List Plans */
         Fact("ListPlans Should Be a Function",
